@@ -44,8 +44,8 @@ const ContactUs: React.FC<{ className?: string }> = ({ className }) => {
 			animate={{ opacity: 1, y: 0 }}
 			exit={{ opacity: 0, y: -50 }}
 			transition={{ duration: 0.5 }}
-			className={`rounded-xl shadow-lg text-gray-200 ${className}`}>
-			<h1 className="text-4xl font-bold text-center text-blue-400 mb-10">
+			className={`rounded-xl shadow-lg ${className}`}>
+			<h1 className="text-4xl font-bold text-center text-blue-700 mb-10">
 				Contact Me
 			</h1>
 			<div className="flex flex-col items-center space-y-6">
@@ -57,8 +57,8 @@ const ContactUs: React.FC<{ className?: string }> = ({ className }) => {
 						href={contact.link}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center  md:pl-20 w-full sm:w-96 bg-gray-700 p-4 rounded-lg shadow-md hover:bg-gray-600 transition">
-						<span className="text-blue-400">{contact.icon}</span>
+						className="flex items-center  md:pl-20 w-full sm:w-96 bg-gray-700 hover:bg-gray-600 border border-blue-900 hover:border-blue-700 p-4 rounded-lg shadow-md transition">
+						<span className="text-blue-700">{contact.icon}</span>
 						<span className="ml-3 text-lg">{contact.value}</span>
 					</motion.a>
 				))}

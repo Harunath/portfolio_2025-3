@@ -24,22 +24,22 @@ const Navbar: React.FC = () => {
 			icon: <HiOutlineHome className="inline-block mr-1" />,
 		},
 		{
-			to: "#experience",
+			to: "/experience",
 			label: "Experience",
 			icon: <HiOutlineBriefcase className="inline-block mr-1" />,
 		},
 		{
-			to: "#about",
+			to: "/aboutme",
 			label: "About Me",
 			icon: <HiUser className="inline-block mr-1" />,
 		},
 		{
-			to: "#projects",
+			to: "/projects",
 			label: "Projects",
 			icon: <HiViewGrid className="inline-block mr-1" />,
 		},
 		{
-			to: "#contact",
+			to: "/contactme",
 			label: "Contact Me",
 			icon: <HiOutlineMail className="inline-block mr-1" />,
 		},
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
 		<nav className=" px-4 md:px-24 lg:px-44 py-4 backdrop-blur-2xl">
 			<div className="max-h-9 max-w-7xl mx-auto px-4 flex justify-between items-center">
 				<div>
-					<Link href="/" className="font-bold text-xl text-white">
+					<Link href="/" className="font-bold text-xl ">
 						Harunath
 					</Link>
 				</div>
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
 						<Link
 							key={item.label}
 							href={item.to}
-							className="flex items-center text-white hover:text-gray-300 px-2 py-2 rounded-md text-sm font-medium">
+							className="flex items-center hover:text-blue-500 px-2 py-2 rounded-md text-sm font-medium">
 							{item.icon}
 							{item.label}
 						</Link>
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
 				<div className="lg:hidden">
 					<button
 						onClick={toggleMenu}
-						className="text-white hover:text-gray-200 focus:outline-none">
+						className="hover:text-blue-500 focus:outline-none">
 						<HiOutlineMenu className="text-2xl" />
 					</button>
 				</div>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
 							<Link
 								key={item.label}
 								href={item.to}
-								className="text-white hover:text-gray-200 text-sm font-medium flex justify-center items-center w-full py-2">
+								className=" hover:text-blue-500 text-sm font-medium flex justify-center items-center w-full py-2">
 								<div className="w-[100px]">
 									{item.icon}
 									{item.label}

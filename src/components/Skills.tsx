@@ -51,7 +51,7 @@ export default function Skills() {
 
 	return (
 		<div className="max-w-3xl mx-auto shadow-lg rounded-2xl">
-			<h2 className="text-3xl font-bold text-blue- mb-4 text-blue-400">
+			<h2 className="text-3xl font-bold text-blue- mb-4 text-blue-700">
 				Skills
 			</h2>
 			<div className="space-y-4">
@@ -64,7 +64,7 @@ export default function Skills() {
 							{skill.items.map((item, idx) => (
 								<li
 									key={idx}
-									className="bg-gray-800 text-gray-100 px-3 py-1 rounded-lg text-sm font-medium">
+									className="bg-gray-800 text-white px-3 py-1 rounded-lg text-sm font-medium border border-blue-900">
 									{item}
 								</li>
 							))}

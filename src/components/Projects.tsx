@@ -89,7 +89,7 @@ const Projects = () => {
 	return (
 		<section className="py-12">
 			<div className="container mx-auto sm:px-4">
-				<h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+				<h2 className="text-3xl font-bold text-center text-blue-700 mb-8">
 					Projects
 				</h2>
 
@@ -97,7 +97,7 @@ const Projects = () => {
 					{projects.map((project, index) => (
 						<motion.div
 							key={index}
-							className="bg-gray-900 flex flex-col gap-x-2 overflow-hidden shadow-lg transition-all p-4 rounded"
+							className="bg-gray-900 flex flex-col gap-x-2 border border-blue-900 shadow-lg transition-all p-4 rounded"
 							initial={{ opacity: 0, y: 50 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: index * 0.2 }}>
@@ -115,7 +115,7 @@ const Projects = () => {
 							{/* Project Overview */}
 							<div className="p-6">
 								<div className="flex justify-between items-center">
-									<h3 className="sm:text-xl md:text-2xl font-semibold text-blue-500 mb-3">
+									<h3 className="sm:text-xl md:text-2xl font-semibold text-blue-700">
 										{project.title}
 									</h3>
 									{/* View Project Link */}
@@ -123,22 +123,22 @@ const Projects = () => {
 										<a
 											target="_blank"
 											href={project.link}
-											className="block text-blue-400 hover:text-blue-500">
+											className="block text-blue-700 hover:text-blue-700">
 											<FaExternalLinkAlt className="h-4 w-4 md:h-5 md:w-5" />
 										</a>
 										<a
 											target="_blank"
 											href={project.gitLink}
-											className="block text-blue-400 hover:text-blue-500">
+											className="block text-blue-700 hover:text-blue-700">
 											<IoLogoGithub className="h-5 w-5 h-6 w-6" />
 										</a>
 									</div>
 								</div>
 								<div className="hidden sm:block">
-									<p className="mt-4 block text-blue-400 hover:text-blue-500">
-										Description -{" "}
+									<p className="mt-2 block text-blue-700 hover:text-blue-500">
+										Description
 									</p>
-									<p className="text-gray-400">
+									<p>
 										{/* {selectedProject === index ?*/}
 										{project.description.split("\n").map((line, i) => (
 											<span key={i}>
