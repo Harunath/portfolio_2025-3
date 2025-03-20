@@ -5,7 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 const projects = [
 	{
-		title: "Bizz Network",
+		title: "Bizz Network Platform",
 		description: `● Developing a B2B business platform where professionals refer businesses, track referrals, and receive testimonials.  
 			● Implemented NextAuth for secure authentication and SMTP for email verification.  
 			● Designed a responsive and user-friendly interface with Tailwind CSS.  
@@ -20,7 +20,7 @@ const projects = [
 		gitLink: "https://github.com/Harunath/bizz-network",
 	},
 	{
-		title: "GenieBucks",
+		title: "GenieBucks App",
 		description: `● Developed a robust financial management platform using Next.js 15 and Gmail authentication for secure, seamless access. 
 			● Leveraged Prisma ORM with PostgreSQL to ensure efficient data handling and reliable transaction processing. 
 			● Crafted a responsive, visually appealing UI with Tailwind CSS and Framer Motion, enhancing user engagement through smooth animations.
@@ -34,7 +34,7 @@ const projects = [
 	},
 
 	{
-		title: "eLearning Platform",
+		title: "Dev-Learners Platform",
 		description: `● Architected a comprehensive LMS using Next.js, incorporating Next-Auth to establish secure, seamless user authentication.
 		● Designed a responsive, modern UI with Tailwind CSS, ensuring optimal accessibility and consistent performance across devices.
 		● Developed a scalable backend with PostgreSQL and Prisma ORM, streamlining data management and query efficiency.
@@ -42,8 +42,8 @@ const projects = [
 		● Integrated Cloudinary for efficient content management, optimizing media handling and reducing page load times by approximately 10%. `,
 		image:
 			"https://res.cloudinary.com/degrggosz/image/upload/v1739544745/Screenshot_2025-02-14_202024_wp6y6k.png",
-		alt: "eLearning Platform",
-		link: "https://dev-cources.vercel.app/",
+		alt: "Dev-Learners Platform",
+		link: "https://dev-learners.vercel.app/",
 		gitLink: "https://github.com/Harunath/dev-learner",
 	},
 	{
@@ -72,7 +72,7 @@ const projects = [
 		gitLink: "https://github.com/Harunath/GS060699_Harunath_Eskuri",
 	},
 	{
-		title: "SimpleUPI",
+		title: "SimpleUPI App",
 		description: `● Engineered a secure digital payment solution using Next.js, integrating JWT-based authentication for user registration and login.
 			● Developed a scalable backend architecture with Prisma ORM and PostgreSQL, ensuring reliable transaction management.
 			● Implemented core functionalities including fund transfers, deposits, and real-time balance monitoring for seamless user experience.
