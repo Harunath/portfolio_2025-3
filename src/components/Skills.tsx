@@ -1,3 +1,5 @@
+import InViewUp from "./animations/InViewUp";
+
 export default function Skills() {
 	const skills = [
 		{
@@ -24,9 +26,10 @@ export default function Skills() {
 			items: [
 				"Node.js",
 				"Express.js",
-				"Django",
+				"FastAPI",
 				"PostgreSQL",
-				"Prisma",
+				"SQLAlchemy",
+				"PrismaORM",
 				"MongoDB",
 				"Zod",
 				"Web Sockets",
@@ -52,23 +55,27 @@ export default function Skills() {
 	return (
 		<div className="max-w-3xl mx-auto shadow-lg rounded-2xl">
 			<h2 className="text-3xl font-bold text-blue- mb-4 text-blue-700">
-				Skills
+				<InViewUp>Skills</InViewUp>
 			</h2>
 			<div className="space-y-4">
 				{skills.map((skill, index) => (
 					<div key={index}>
-						<h3 className="text-xl font-semibold text-white">
-							{skill.category}
-						</h3>
-						<ul className="mt-2 flex flex-wrap gap-2">
-							{skill.items.map((item, idx) => (
-								<li
-									key={idx}
-									className="bg-gray-800 text-white px-3 py-1 rounded-lg text-sm font-medium border border-blue-900">
-									{item}
-								</li>
-							))}
-						</ul>
+						<InViewUp>
+							<h3 className="text-xl font-semibold text-white">
+								{skill.category}
+							</h3>
+						</InViewUp>
+						<InViewUp>
+							<ul className="mt-2 flex flex-wrap gap-2">
+								{skill.items.map((item, idx) => (
+									<li
+										key={idx}
+										className="bg-gray-800 text-white px-3 py-1 rounded-lg text-sm font-medium border border-blue-900">
+										{item}
+									</li>
+								))}
+							</ul>
+						</InViewUp>
 					</div>
 				))}
 			</div>

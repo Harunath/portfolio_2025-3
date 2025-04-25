@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { ReactNode } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 
@@ -50,17 +50,7 @@ const ContactUs: React.FC<{ className?: string }> = ({ className }) => {
 			</h1>
 			<div className="flex flex-col items-center space-y-6">
 				{contacts.map((contact, index) => (
-					<motion.a
-						whileHover={{ scale: 1.05 }}
-						whileTap={{ scale: 0.95 }}
-						key={index}
-						href={contact.link}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex items-center  md:pl-20 w-full sm:w-96 bg-gray-700 hover:bg-gray-600 border border-blue-900 hover:border-blue-700 p-4 rounded-lg shadow-md transition">
-						<span className="text-blue-700">{contact.icon}</span>
-						<span className="ml-3 text-lg">{contact.value}</span>
-					</motion.a>
+					<Links key={index} contact={contact} />
 				))}
 			</div>
 		</motion.div>
@@ -68,3 +58,42 @@ const ContactUs: React.FC<{ className?: string }> = ({ className }) => {
 };
 
 export default ContactUs;
+
+const Links = ({
+	contact,
+	key,
+}: {
+	key: number;
+	contact: {
+		icon: ReactNode;
+		label: string;
+		value: string;
+		link: string;
+	};
+}) => {
+	const controls = useAnimation();
+
+	return (
+		<motion.a
+			key={key}
+			onHoverStart={() => {
+				controls.start({
+					rotate: [0, 20, -20, 20, -20, 0],
+					transition: { duration: 0.6, ease: "easeInOut" },
+				});
+			}}
+			onHoverEnd={() => {
+				controls.stop(); // Stop the current animation
+				controls.start({ rotate: 0 }); // Reset to 0 to avoid stuck rotation
+			}}
+			animate={controls}
+			whileTap={{ scale: 0.95 }}
+			href={contact.link}
+			target="_blank"
+			rel="noopener noreferrer"
+			className="flex items-center  md:pl-20 w-full sm:w-96 bg-gray-700 hover:bg-gray-600 border border-blue-900 hover:border-blue-700 p-4 rounded-lg shadow-md transition">
+			<span className="text-blue-700">{contact.icon}</span>
+			<span className="ml-3 text-lg">{contact.value}</span>
+		</motion.a>
+	);
+};
