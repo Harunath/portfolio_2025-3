@@ -7,10 +7,10 @@ const InViewUp = ({ children }: { children: ReactNode }) => {
 	const inView = useInView(ref, { once: true });
 	const varients = {
 		initial: {
-			y: 50,
-			x: 50,
+			y: 10,
+			x: 10,
 			opactity: 0.5,
-			scale: 0.5,
+			scale: 0.9,
 		},
 		animate: {
 			y: 0,
