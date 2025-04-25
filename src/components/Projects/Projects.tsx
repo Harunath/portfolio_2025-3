@@ -1,8 +1,4 @@
-"use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io";
+import EachProject from "./EachProject";
 const projects = [
 	{
 		title: "Bizz Network Platform",
@@ -87,70 +83,15 @@ const projects = [
 
 const Projects = () => {
 	return (
-		<section className="py-12">
+		<section className="pb-12 pt-4">
 			<div className="container mx-auto sm:px-4">
 				<h2 className="text-3xl font-bold text-center text-blue-700 mb-8">
 					Projects
 				</h2>
 
-				<div className="flex flex-col gap-4">
+				<div className="flex flex-col items-center gap-4">
 					{projects.map((project, index) => (
-						<motion.div
-							key={index}
-							className="bg-gray-900 flex flex-col gap-x-2 border border-blue-900 shadow-lg transition-all p-4 rounded"
-							initial={{ opacity: 0, y: 50 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: index * 0.2 }}>
-							{/* Project Image - Click to Expand */}
-							<a href={project.link} target="_blank" rel="noopener noreferrer">
-								<Image
-									src={project.image}
-									alt={project.alt}
-									className="max-w-full h-fit cursor-pointer"
-									width={1080}
-									height={700}
-								/>
-							</a>
-
-							{/* Project Overview */}
-							<div className="p-6">
-								<div className="flex justify-between items-center">
-									<h3 className="sm:text-xl md:text-2xl font-semibold text-blue-700">
-										{project.title}
-									</h3>
-									{/* View Project Link */}
-									<div className="flex items-center justify-between gap-x-4">
-										<a
-											target="_blank"
-											href={project.link}
-											className="block text-blue-700 hover:text-blue-700">
-											<FaExternalLinkAlt className="h-4 w-4 md:h-5 md:w-5" />
-										</a>
-										<a
-											target="_blank"
-											href={project.gitLink}
-											className="block text-blue-700 hover:text-blue-700">
-											<IoLogoGithub className="h-5 w-5 h-6 w-6" />
-										</a>
-									</div>
-								</div>
-								<div className="hidden sm:block">
-									<p className="mt-2 block text-blue-700 hover:text-blue-500">
-										Description
-									</p>
-									<p>
-										{/* {selectedProject === index ?*/}
-										{project.description.split("\n").map((line, i) => (
-											<span key={i}>
-												{line}
-												<br />
-											</span>
-										))}
-										{/* : `${project.description.substring(0, 100)}...`} */}
-									</p>
-								</div>
-							</div>
-						</motion.div>
+						<EachProject key={index} project={project} />
 					))}
 				</div>
 			</div>

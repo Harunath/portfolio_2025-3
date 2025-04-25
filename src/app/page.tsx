@@ -4,7 +4,7 @@ import ContactUs from "@/components/ContactUs";
 import Experience from "@/components/Experience";
 import GitLinkedin from "@/components/GitLinkedin";
 import Hero from "@/components/Hero"; // Assuming Hero component is located in the same directory
-import Projects from "@/components/Projects";
+import Projects from "@/components/Projects/Projects";
 
 function Home() {
 	return (

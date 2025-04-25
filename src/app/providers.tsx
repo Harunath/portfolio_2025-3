@@ -11,7 +11,7 @@ const Providers = ({ children }: { children: ReactNode }) => {
 		<div className="bg-[#070701] text-white md:px-20 lg:px-40 dark">
 			<AnimatePresence mode="wait">
 				<div className="relative">
-					<div className="fixed top-0 left-0 w-full z-10">
+					<div className="fixed top-0 left-0 w-full z-50">
 						<Navbar />
 					</div>
 					<motion.div
