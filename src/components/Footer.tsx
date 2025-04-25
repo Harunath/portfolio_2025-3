@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 
@@ -44,14 +46,21 @@ const Footer: React.FC = () => {
 					</h2>
 					<div className="flex justify-center space-x-5">
 						{socialLinks.map(({ href, label, icon }) => (
-							<a
+							<motion.a
+								whileHover={{
+									rotate: 360,
+									transition: {
+										duration: 0.3,
+										ease: "circInOut",
+									},
+								}}
 								key={label}
 								href={href}
 								target="_blank"
 								aria-label={label}
 								className="p-3 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 hover:shadow-xl">
 								{icon}
-							</a>
+							</motion.a>
 						))}
 					</div>
 				</div>
@@ -63,13 +72,21 @@ const Footer: React.FC = () => {
 					</h2>
 					<div className="flex flex-wrap justify-center gap-6">
 						{quickLinks.map(({ href, text }) => (
-							<Link
-								key={text}
-								href={href}
-								className="hover:text-blue-700 transition-colors"
-								onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-								{text}
-							</Link>
+							<motion.div
+								whileHover={{
+									rotateX: 10,
+									rotateY: -10,
+								}}
+								key={text}>
+								<Link
+									href={href}
+									className="hover:text-blue-700 transition-colors"
+									onClick={() =>
+										window.scrollTo({ top: 0, behavior: "smooth" })
+									}>
+									{text}
+								</Link>
+							</motion.div>
 						))}
 					</div>
 				</div>

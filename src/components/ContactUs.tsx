@@ -61,9 +61,7 @@ export default ContactUs;
 
 const Links = ({
 	contact,
-	key,
 }: {
-	key: number;
 	contact: {
 		icon: ReactNode;
 		label: string;
@@ -75,7 +73,6 @@ const Links = ({
 
 	return (
 		<motion.a
-			key={key}
 			onHoverStart={() => {
 				controls.start({
 					rotate: [0, 20, -20, 20, -20, 0],
