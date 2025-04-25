@@ -4,7 +4,7 @@ import ContactUs from "./ContactUs";
 import Experience from "./Experience";
 import GitLinkedin from "./GitLinkedin";
 import Hero from "./Hero"; // Assuming Hero component is located in the same directory
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 
 function Home() {
